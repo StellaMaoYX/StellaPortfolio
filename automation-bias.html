@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI-first vs. Human-first · Stella Mao</title>
+<meta name="description" content="A 100-person experiment on how AI workflow order changes the errors people make.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Stella Mao <span>UX Research</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#more" class="hide-s">More</a>
+      <a href="index.html#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener" class="hide-s">LinkedIn ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article data-view="automation-bias">
+  <header class="cs-hero wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="kicker"><span class="tag">Quantitative</span><span class="label">Case study 02 · Online experiment</span></div>
+    <h1>Who goes first matters: AI-first vs. human-first decisions</h1>
+    <p class="sub">Every AI-assisted tool makes a design choice about when to show its recommendation. I ran a between-subjects experiment to see what that choice does to the mistakes people make.</p>
+    <dl class="meta">
+      <div><dt>My role</dt><dd>Lead researcher and first author: design, build, analysis, writing</dd></div>
+      <div><dt>Timeline</dt><dd>Sep 2025 to Aug 2026</dd></div>
+      <div><dt>Methods</dt><dd>Randomized experiment, interaction logs, confidence ratings, open-ended responses</dd></div>
+      <div><dt>Output</dt><dd>Full paper under review at CHI, with Yanheng Li and Sourojit Ghosh</dd></div>
+    </dl>
+    <div class="tldr">
+      <div><h3>The question</h3><p>Should an AI show its recommendation first, or wait until the person commits to their own judgment? Most teams look only at overall accuracy.</p></div>
+      <div><h3>What I did</h3><p>A randomized study with 100 Prolific participants doing 24 AI-assisted X-ray screening decisions, with every click, zoom and AI toggle logged.</p></div>
+      <div><h3>What I found</h3><p>Same accuracy, different failures. AI-first users followed wrong AI flags 67% more often, while spending more time "verifying". The real choice is which error you can afford.</p></div>
+    </div>
+  </header>
+
+  <div class="wrap cs-body">
+    <nav class="toc" aria-label="Sections">
+      <a href="#ab-context">Context</a><a href="#ab-design">Study design</a><a href="#ab-hyp">Hypotheses</a><a href="#ab-findings">Findings</a><a href="#ab-recs">Design guidance</a><a href="#ab-reflect">Reflection</a>
+    </nav>
+    <div class="cs-main">
+      <section class="block" id="ab-context">
+        <p class="label">Context</p>
+        <h2>Accuracy dashboards hide how AI changes people's mistakes</h2>
+        <div class="prose">
+          <p>Content moderation, clinical decision support and security screening all pair a person with an AI recommendation. Automation bias, over-relying on that recommendation, comes in two forms that have very different costs:</p>
+          <ul>
+            <li><strong>Commission errors:</strong> the AI raises a false alarm and the person follows it.</li>
+            <li><strong>Omission errors:</strong> the AI misses a real problem and the person misses it too.</li>
+          </ul>
+          <p>Prior work mostly reports whether a workflow raises or lowers overall accuracy. I wanted to know how workflow order changes the <em>mix</em> of errors and the behavior behind them, because that's what a product team actually needs to choose a design.</p>
+        </div>
+        <div class="rqs">
+          <div class="rq"><b>RQ1 · Outcomes</b>How does order affect accuracy, commission errors and omission errors?</div>
+          <div class="rq"><b>RQ2 · Behavior</b>How does order change how people verify and consult the AI?</div>
+          <div class="rq"><b>RQ3 · Calibration</b>Does knowing when you're right protect against bias in either workflow?</div>
+        </div>
+      </section>
+
+      <section class="block" id="ab-design">
+        <p class="label">Stages 1–2 · Planning and research · Study design</p>
+        <h2>Same images, same AI, only the order changes</h2>
+        <div class="prose"><p>I chose X-ray baggage screening because it is a standard paradigm in automation-bias research where right and wrong are unambiguous. That made it possible to plant exactly as many chances for each error type as I needed.</p></div>
+        <dl class="spec">
+          <div><dt>Design</dt><dd>2 workflow (between) × 2 AI correctness × 2 difficulty (within)</dd></div>
+          <div><dt>Participants</dt><dd>N = 100 on Prolific, randomized 50 / 50, desktop only, IRB approved</dd></div>
+          <div><dt>AI-first</dt><dd>Image and AI label shown together; users can hide the AI, then submit once</dd></div>
+          <div><dt>Human-first</dt><dd>Users submit an unaided call, then see the AI and may revise</dd></div>
+          <div><dt>Trials</dt><dd>24 per person: 12 AI-correct, 6 planted false alarms, 6 planted misses</dd></div>
+          <div><dt>Logged</dt><dd>Verification time, zoom / drag / draw use, AI toggles, AI-visible time, 0 to 100 confidence</dd></div>
+          <div><dt>Analysis</dt><dd>Welch's t-tests with Wilcoxon checks; mixed-effects logistic regression in R (lme4)</dd></div>
+          <div><dt>Calibration</dt><dd>Brier score from confidence vs. correctness, plus a non-overlapping-trials sensitivity check</dd></div>
+        </dl>
+        <figure class="photo white"><img src="images/ab_fig1.jpg" alt="The two study interfaces. Top: AI-first, where the AI warning box shows with the image and can be toggled. Bottom: human-first, where the user answers first and sees the AI warning on the next screen."><figcaption>The study interface I built. Top: AI-first, where the AI flag appears with the image and can be toggled off. Bottom: human-first, where the AI flag appears only on the next screen, after an unaided answer.</figcaption></figure>
+      </section>
+
+      <section class="block" id="ab-hyp">
+        <p class="label">Stage 1 · Planning · Hypotheses</p>
+        <h2>What I expected, and what happened</h2>
+        <div class="prose"><p>I set four hypotheses from prior automation-bias research before collecting data. Three didn't hold, which is what made the result useful to a design team.</p></div>
+        <div class="table-scroll">
+          <table class="recs">
+            <thead><tr><th>#</th><th>Hypothesis</th><th>Result</th><th>What the data showed</th></tr></thead>
+            <tbody>
+              <tr><td class="mono">H1a</td><td>AI-first causes more commission and omission errors</td><td><span class="sev mid"><i></i>Partly</span></td><td>Commission only</td></tr>
+              <tr><td class="mono">H1b</td><td>Human-first gives higher accuracy</td><td><span class="sev high"><i></i>Not supported</span></td><td>Equal overall, with a crossover by AI correctness</td></tr>
+              <tr><td class="mono">H2</td><td>Human-first users verify more</td><td><span class="sev high"><i></i>Not supported</span></td><td>The opposite: AI-first verified more</td></tr>
+              <tr><td class="mono">H3</td><td>Calibration changes the workflow effect</td><td><span class="sev high"><i></i>Not supported</span></td><td>Better calibration helped in both workflows</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="ab-findings">
+        <p class="label">Stage 3 · Synthesis · Findings</p>
+        <h2>Order didn't change how often people were right. It changed how they were wrong.</h2>
+
+        <div class="charts">
+          <figure class="chart" style="margin:0">
+            <h4>Accuracy crosses over with AI correctness</h4>
+            <div class="legend"><span><i style="background:var(--accent)"></i>AI-first</span><span><i style="background:var(--ink)"></i>Human-first</span></div>
+            <svg viewBox="0 0 600 260" role="img" aria-label="Line chart. When the AI is correct, AI-first accuracy is 91 percent and human-first is 82 percent. When the AI is wrong, AI-first drops to 56 percent and human-first to 64 percent.">
+              <g class="svg-line" stroke-width="1">
+                <line x1="80" y1="30" x2="560" y2="30"/><line x1="80" y1="66" x2="560" y2="66"/><line x1="80" y1="102" x2="560" y2="102"/><line x1="80" y1="138" x2="560" y2="138"/><line x1="80" y1="174" x2="560" y2="174"/>
+              </g>
+              <line x1="80" y1="210" x2="560" y2="210" style="stroke:var(--ink)" stroke-width="1.5"/>
+              <g class="svg-text" text-anchor="end"><text x="70" y="34">100%</text><text x="70" y="70">90%</text><text x="70" y="106">80%</text><text x="70" y="142">70%</text><text x="70" y="178">60%</text><text x="70" y="214">50%</text></g>
+              <g class="svg-text-ink" text-anchor="middle"><text x="190" y="240">AI correct</text><text x="450" y="240">AI incorrect</text></g>
+              <line x1="190" y1="96" x2="450" y2="161.3" style="stroke:var(--ink)" stroke-width="3" stroke-dasharray="3 6" stroke-linecap="round"/>
+              <line x1="190" y1="62.3" x2="450" y2="189" style="stroke:var(--accent)" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="190" cy="62.3" r="7" style="fill:var(--accent)"/><circle cx="450" cy="189" r="7" style="fill:var(--accent)"/>
+              <circle cx="190" cy="96" r="7" class="svg-ink"/><circle cx="450" cy="161.3" r="7" class="svg-ink"/>
+              <text x="170" y="58" text-anchor="end" class="svg-text-ink" style="fill:var(--accent)">91%</text>
+              <text x="170" y="100" text-anchor="end" class="svg-text-ink">82%</text>
+              <text x="468" y="165" class="svg-text-ink">64%</text>
+              <text x="468" y="193" class="svg-text-ink" style="fill:var(--accent)">56%</text>
+            </svg>
+            <figcaption>Final decision accuracy by condition. Workflow × AI correctness interaction OR = 4.04, p &lt; .001 (mixed-effects logistic regression). Overall accuracy: 17.9 vs. 18.1 of 24, p = .77.</figcaption>
+          </figure>
+
+          <figure class="chart" style="margin:0">
+            <h4>The gap is commission errors</h4>
+            <div class="legend"><span><i style="background:var(--accent)"></i>AI-first</span><span><i style="background:var(--ink)"></i>Human-first</span><span>Whiskers: 95% CI</span></div>
+            <svg viewBox="0 0 600 260" role="img" aria-label="Bar chart of mean errors out of 6 opportunities. Commission: AI-first 2.38, human-first 1.43, p equals .011. Omission: AI-first 2.63, human-first 2.30, not significant.">
+              <g class="svg-line" stroke-width="1"><line x1="245" y1="30" x2="245" y2="200"/><line x1="350" y1="30" x2="350" y2="200"/><line x1="455" y1="30" x2="455" y2="200"/><line x1="560" y1="30" x2="560" y2="200"/></g>
+              <line x1="140" y1="30" x2="140" y2="200" style="stroke:var(--ink)" stroke-width="1.5"/>
+              <text x="12" y="74" class="svg-text-ink">Commission</text><text x="12" y="90" class="svg-text">follow false alarm</text>
+              <text x="12" y="154" class="svg-text-ink">Omission</text><text x="12" y="170" class="svg-text">miss with the AI</text>
+              <rect x="140" y="50" width="249.4" height="22" style="fill:var(--accent)"/>
+              <rect x="140" y="76" width="149.6" height="22" class="svg-ink"/>
+              <rect x="140" y="130" width="275.6" height="22" style="fill:var(--accent)"/>
+              <rect x="140" y="156" width="241.5" height="22" class="svg-ink"/>
+              <g style="stroke:var(--muted)" stroke-width="2">
+                <line x1="327.3" y1="61" x2="451.4" y2="61"/><line x1="327.3" y1="55" x2="327.3" y2="67"/><line x1="451.4" y1="55" x2="451.4" y2="67"/>
+                <line x1="243.4" y1="87" x2="335.8" y2="87"/><line x1="243.4" y1="81" x2="243.4" y2="93"/><line x1="335.8" y1="81" x2="335.8" y2="93"/>
+                <line x1="384.5" y1="141" x2="446.7" y2="141"/><line x1="384.5" y1="135" x2="384.5" y2="147"/><line x1="446.7" y1="135" x2="446.7" y2="147"/>
+                <line x1="338.3" y1="167" x2="424.7" y2="167"/><line x1="338.3" y1="161" x2="338.3" y2="173"/><line x1="424.7" y1="161" x2="424.7" y2="173"/>
+              </g>
+              <text x="590" y="80" text-anchor="end" class="svg-text-ink">p = .011</text>
+              <text x="590" y="160" text-anchor="end" class="svg-text">n.s. (.20)</text>
+              <g class="svg-text" text-anchor="middle"><text x="140" y="220">0</text><text x="245" y="220">1</text><text x="350" y="220">2</text><text x="455" y="220">3</text><text x="560" y="220">4</text></g>
+              <text x="350" y="246" text-anchor="middle" class="svg-text">mean errors per person, out of 6 opportunities</text>
+            </svg>
+            <figcaption>Commission: 2.38 vs. 1.43. Omission: 2.63 vs. 2.30. Total automation bias: 5.0 vs. 3.7 of 12, p = .006.</figcaption>
+          </figure>
+        </div>
+
+        <div>
+          <div class="finding">
+            <div>
+              <h3>1. Showing AI first trades one risk for another</h3>
+              <p>When the AI was right, AI-first users were more accurate. When it was wrong, they were less accurate. Aggregate accuracy averaged these out to a tie, which is exactly why an accuracy-only dashboard would call the two designs equal.</p>
+            </div>
+            <div><blockquote>"The AI tool made me unsure of my decisions... that made me more unsure even when I was pretty sure it was safe."<cite>AI-first participant</cite></blockquote></div>
+          </div>
+          <div class="finding">
+            <div>
+              <h3>2. More verification did not mean more independent judgment</h3>
+              <p>AI-first users spent <span class="mono tab">19.4 s</span> verifying per trial vs. <span class="mono tab">10.5 s</span>, and switched tools almost twice as often (<span class="mono tab">2.8</span> vs. <span class="mono tab">1.5</span>), yet made more commission errors. The AI label stayed on screen for <span class="mono tab">93%</span> of their trial time vs. <span class="mono tab">10%</span>. They were checking <em>where the AI pointed</em>. Effort metrics alone would have rated this the more careful workflow.</p>
+            </div>
+            <div><blockquote>"I always zoomed on the area that the AI was suggesting, and then dragged around looking for things."<cite>AI-first participant</cite></blockquote></div>
+          </div>
+          <div class="finding">
+            <div>
+              <h3>3. Deciding first helps, but the revision step leaks</h3>
+              <p>In the human-first workflow, correct AI advice fixed <span class="mono tab">41%</span> of wrong initial calls (75 of 181). Wrong AI advice also flipped <span class="mono tab">13%</span> of correct calls (57 of 423), mostly when people felt unsure. Human-first used the AI as a second opinion, consulting it more often but briefly.</p>
+            </div>
+            <div><blockquote>"If the answer was obvious, I did not even count what AI said. If I wasn't sure, I checked if my observation was the same as AI's."<cite>Human-first participant</cite></blockquote></div>
+          </div>
+          <div class="finding">
+            <div>
+              <h3>4. Calibrated people resisted bias in both workflows</h3>
+              <p>People whose confidence tracked their accuracy made fewer automation-bias errors under either design, with no evidence that calibration changed the workflow effect (interaction OR = 1.05, 95% CI 0.48 to 2.29). Calibration support is a lever that works alongside workflow choice.</p>
+            </div>
+            <div><blockquote>"I felt uncertain when the AI's suggestion differed from my initial decision, which prompted me to re-examine the image."<cite>Human-first participant</cite></blockquote></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="ab-recs">
+        <p class="label">Outcome · Design guidance</p>
+        <h2>What I'd tell a team shipping an AI-assisted review tool</h2>
+        <div class="impl">
+          <div><h3>Choose the order by the cost of each error</h3><p>If false alarms are expensive to act on, delay the AI. If the model is highly reliable and misses are the bigger risk, showing it first can help. Track commission and omission separately.</p></div>
+          <div><h3>Use staged disclosure</h3><p>Ask for a quick initial call, or reveal AI detail progressively, so people form a view before the recommendation frames what they look at.</p></div>
+          <div><h3>Add friction where revisions go wrong</h3><p>When someone is about to switch from their own answer to the AI's, highlight the disagreement or ask for a one-line reason.</p></div>
+          <div><h3>Don't use time-on-task as a trust metric</h3><p>Long inspection under constant AI exposure looked diligent and produced more bias. Measure where attention goes, not only how long it lasts.</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="ab-reflect">
+        <p class="label">Reflection</p>
+        <h2>Two hypotheses failed, and that was the finding</h2>
+        <div class="reflect">
+          <div><h3>Worked</h3><ul><li>Planting equal false alarms and misses let me separate the two error types cleanly.</li><li>Interaction logs explained the "why" that outcome data couldn't.</li><li>Open-ended responses gave the team quotable mechanisms.</li></ul></div>
+          <div><h3>Limits</h3><ul><li>Simulated AI and a lab task; real screeners have training and time pressure.</li><li>Crowd workers, not domain experts.</li><li>Open-ended responses illustrate patterns but weren't formally coded.</li></ul></div>
+          <div><h3>Next time</h3><ul><li>Pre-register hypotheses and a power analysis.</li><li>Test staged disclosure and revision friction as conditions.</li><li>Run with domain experts in a realistic tool.</li></ul></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="next wrap"><a href="vr-dental.html"><div><p class="label">Next case study</p><h3>Designing VR for anxious kids when parents and dentists also decide</h3></div><span class="arrow">→</span></a></div>
+</article>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="label" style="color:color-mix(in srgb,var(--paper) 70%,transparent)">Contact</p>
+    <h2 style="margin-top:1rem">Hiring for UX research? I'd like to hear about the problem.</h2>
+    <div class="row">
+      <span class="email" id="email">stellamaoyx.wk@gmail.com</span>
+      <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=OShCOa4AAAAJ&amp;hl" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</section>
+<footer class="foot"><div class="wrap"><span>© 2026 Yaxuan (Stella) Mao</span><span>Participant quotes are anonymized. Some details are simplified for confidentiality.</span></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

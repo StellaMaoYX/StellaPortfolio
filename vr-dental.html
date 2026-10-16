@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VR for Dental Anxiety · Stella Mao</title>
+<meta name="description" content="Co-designing VR with anxious children, their parents and dentists.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Stella Mao <span>UX Research</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#more" class="hide-s">More</a>
+      <a href="index.html#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener" class="hide-s">LinkedIn ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article data-view="vr-dental">
+  <header class="cs-hero wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="kicker"><span class="tag">Generative</span><span class="label">Case study 03 · Co-design</span></div>
+    <h1>"Can I decorate my teeth with diamonds?"</h1>
+    <p class="sub">Exploring how VR could ease children's dental anxiety, with the children designing it, and their parents and dentists telling us what would actually be allowed in the room.</p>
+    <dl class="meta">
+      <div><dt>My role</dt><dd>Lead researcher and first author: protocol, recruiting, facilitation, analysis</dd></div>
+      <div><dt>Timeline</dt><dd>Sep 2023 to Mar 2025</dd></div>
+      <div><dt>Methods</dt><dd>Co-design workshops, bodystorming, parent and dentist interviews, thematic analysis</dd></div>
+      <div><dt>Output</dt><dd>Published at ACM CSCW 2025 · BiWell Lab, CityU Hong Kong</dd></div>
+    </dl>
+    <div class="tldr">
+      <div><h3>The problem</h3><p>Dental anxiety leads children to delay care. Sedation worries parents and therapy takes time. Existing VR tools mostly distract, and they're designed without the adults who decide whether a child uses them.</p></div>
+      <div><h3>What I did</h3><p>5 co-design workshops with 13 anxious children aged 10 to 12, parallel interviews with their 13 parents, and design reviews with 2 dentists.</p></div>
+      <div><h3>What I found</h3><p>Each group defined success differently. I turned the conflicts into six product requirements, including using different VR modes before and during treatment.</p></div>
+    </div>
+  </header>
+
+  <div class="wrap cs-body">
+    <nav class="toc" aria-label="Sections">
+      <a href="#vr-context">Context</a><a href="#vr-method">Method</a><a href="#vr-findings">Findings</a><a href="#vr-impl">Requirements</a><a href="#vr-reflect">Reflection</a>
+    </nav>
+    <div class="cs-main">
+      <section class="block" id="vr-context">
+        <p class="label">Context</p>
+        <h2>A product with three customers</h2>
+        <div class="prose">
+          <p>A children's health product has a user who experiences it, a gatekeeper who decides whether the user gets it, and an operator who has to work around it. Designing only for the child produces something parents won't allow or dentists can't use mid-procedure. So the study put the child at the center and brought the adults in at the right moments.</p>
+        </div>
+        <div class="rqs">
+          <div class="rq"><b>RQ1 · Vision</b>How do children, parents and dentists imagine VR easing a child's dental anxiety?</div>
+          <div class="rq"><b>RQ2 · Constraints</b>What do parents and dentists need, and worry about, before they'd accept it?</div>
+        </div>
+      </section>
+
+      <section class="block" id="vr-method">
+        <p class="label">Stage 2 · User research · Method</p>
+        <h2>Letting 10-year-olds design, without the adults steering</h2>
+        <div class="prose"><p>Recruiting was the first hard problem. We screened 44 children with a standardized dental-fear scale (CFSS-DS) and kept 13 with moderate to severe anxiety. Strict criteria made online recruiting slow, so I printed posters and took them to elementary schools.</p></div>
+        <ol class="flow">
+          <li><b>Journey map</b>Children mapped their last dental visit with comics: triggers, coping, what helped.</li>
+          <li><b>VR inspiration</b>5 minutes each in three Quest 2 apps: active play, a passive 360° film, a dental simulation.</li>
+          <li><b>Design</b>Settings, characters and sounds with paper, Lego and plasticine, then bodystorming the interactions.</li>
+          <li><b>Present</b>Children demoed their designs and gave each other feedback.</li>
+          <li><b>Adult review</b>Parents reacted to the designs; dentists reviewed summaries for safety and workflow.</li>
+        </ol>
+        <dl class="spec">
+          <div><dt>Children</dt><dd>13, aged 10 to 12, in 5 workshops of 2 to 3, 150 to 210 min with long breaks</dd></div>
+          <div><dt>Parents</dt><dd>13, watched remotely from another room so they couldn't steer, then interviewed</dd></div>
+          <div><dt>Dentists</dt><dd>2 (one pediatric, one general), ~1 hour remote design reviews</dd></div>
+          <div><dt>Analysis</dt><dd>Reflexive thematic analysis; 3 coders, independent first pass, cross-checked</dd></div>
+        </dl>
+        <figure class="photo"><img src="images/vr_workshop.jpg" alt="Workshop photos: children mapping dental visits, trying VR headsets, sketching and building objects; parents in a separate room; a remote design review with dentists"><figcaption>The three phases: co-design with children (a to d), VR try-out and interviews with parents (e, f), remote design review with dentists (g). Faces blurred.</figcaption></figure>
+      </section>
+
+      <section class="block" id="vr-findings">
+        <p class="label">Stages 3–4 · Synthesis and modeling · Findings</p>
+        <h2>One headset, three definitions of success</h2>
+        <figure class="photo"><img src="images/vr_designs.jpg" alt="Six children's designs: a virtual forest clinic, an exoskeleton made of Lego, a steel tower game, a school to destroy, a child playing dentist with plasticine, and a zombie battle"><figcaption>What the children built: (1) the clinic as a forest with animals, (2) a calming exoskeleton, (3) a steel-tower game, (4) a school to destroy for venting, (5) playing dentist to a patient who looks like them, (6) battling tooth-decay zombies.</figcaption></figure>
+        <div class="table-scroll">
+          <table class="recs">
+            <thead><tr><th>Group</th><th>Theme</th><th>What it covers</th></tr></thead>
+            <tbody>
+              <tr><td>Children</td><td>A · Prepare before treatment</td><td>Explore a virtual clinic, role-play the dentist, meet other scared kids</td></tr>
+              <tr><td>Children</td><td>B · Engage during treatment</td><td>Control while lying still, calm or cathartic play, hide stressors</td></tr>
+              <tr><td>Parents</td><td>C · Teach oral health</td><td>Replays after treatment, prevention built into everyday play</td></tr>
+              <tr><td>Parents</td><td>D · Protect health and content</td><td>Eyesight, time limits, addiction, no violent content</td></tr>
+              <tr><td>Dentists</td><td>E · Safety and workflow</td><td>Stillness, accurate previews, hospital purchasing and upkeep</td></tr>
+              <tr><td>Dentists</td><td>F · Supplement, not substitute</td><td>Parents stay essential; one session isn't enough</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="prose"><p>Reading the six themes side by side gave a stakeholder map: the child as <strong>user</strong>, the parent as <strong>gatekeeper</strong>, the dentist as <strong>operator</strong>.</p></div>
+        <div class="stake">
+          <div>
+            <p class="role">User</p><h3>Children</h3>
+            <dl>
+              <dt>Want</dt><dd>Control while lying still: a controller mounted on the chair. Friends who are scared too. A rehearsal where they play the dentist.</dd>
+              <dt>Surprise</dt><dd>Some wanted to blow off steam with combat games, not calm scenes.</dd>
+            </dl>
+            <blockquote>"I hope it can support multiplayer mode so that I wouldn't feel lonely."<cite>C8</cite></blockquote>
+          </div>
+          <div>
+            <p class="role">Gatekeeper</p><h3>Parents</h3>
+            <dl>
+              <dt>Want</dt><dd>VR that teaches oral hygiene, not just distraction, such as a replay of the procedure afterward.</dd>
+              <dt>Worry</dt><dd>Eyesight, screen time (about 30 minutes felt reasonable), addiction, and violent content.</dd>
+            </dl>
+            <blockquote>Nearly all parents raised prolonged use and eyesight as their first concern.<cite>Pattern across parent interviews</cite></blockquote>
+          </div>
+          <div>
+            <p class="role">Operator</p><h3>Dentists</h3>
+            <dl>
+              <dt>Want</dt><dd>A child who stays still. Calm, passive content during treatment and realistic previews beforehand.</dd>
+              <dt>Worry</dt><dd>Exciting games make kids move. VR could shift support away from parents. Hospitals must buy and maintain it.</dd>
+            </dl>
+            <blockquote>"VR cannot replace any role."<cite>Dentist</cite></blockquote>
+          </div>
+        </div>
+        <figure class="photo"><img src="images/vr_quotes.jpg" alt="Three children think aloud with speech bubbles: wanting friends while waiting, wanting tools as cute as their designs, and wanting to battle the dentist to vent frustration"><figcaption>Children thinking aloud during design. The third wants to battle the dentist in VR, which is exactly what dentists said would be unsafe in the chair.</figcaption></figure>
+        <div class="callout">
+          <p class="big">The children's most exciting ideas were the ones dentists found most dangerous in the chair.</p>
+          <p>That tension shaped the main requirement: <strong>split the product by stage</strong>. Active, playful, social VR at home or in the waiting room before treatment. Calm, passive VR in the chair, where stillness matters.</p>
+        </div>
+      </section>
+
+      <section class="block" id="vr-impl">
+        <p class="label">Outcome · Product requirements</p>
+        <h2>From conflicting needs to product requirements</h2>
+        <div class="impl">
+          <div><h3>Stage-based modes</h3><p>Interactive before treatment, passive during. Resolves child excitement vs. dentist safety.</p></div>
+          <div><h3>Adaptive exposure</h3><p>Start cartoon-like, move toward realism as anxiety drops, and blur specific stressors. Resolves comfort vs. accurate expectations.</p></div>
+          <div><h3>Control within limits</h3><p>Chair-mounted input and open exploration that respects a still body.</p></div>
+          <div><h3>Safe peer connection</h3><p>Moderated shared spaces, with privacy designed in for minors.</p></div>
+          <div><h3>Family co-selection</h3><p>Parents and children choose content together, which turns parents' content limits into a shared ritual.</p></div>
+          <div><h3>Clinical fit</h3><p>Session time limits, no gore or aggression, staff training, equipment upkeep and consented record-keeping.</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="vr-reflect">
+        <p class="label">Reflection</p>
+        <h2>What researching with children taught me</h2>
+        <div class="reflect">
+          <div><h3>Worked</h3><ul><li>Hands-on materials and bodystorming got 10-year-olds past "make it fun".</li><li>Keeping parents in a separate room protected the children's ideas.</li><li>Dentist reviews grounded ideas in clinical reality early.</li></ul></div>
+          <div><h3>Limits</h3><ul><li>All participants in a Chinese context; 2 dentists only.</li><li>Concepts, not a working system, so no effectiveness data.</li><li>Families interested in technology were likelier to sign up.</li></ul></div>
+          <div><h3>Next time</h3><ul><li>Prototype the stage-based modes and test them in a clinic.</li><li>Recruit more dentists and dental nurses.</li><li>Follow families over multiple visits.</li></ul></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="next wrap"><a href="aura-focus.html"><div><p class="label">Next case study</p><h3>Aura Focus: a task manager for adults with ADHD</h3></div><span class="arrow">→</span></a></div>
+</article>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="label" style="color:color-mix(in srgb,var(--paper) 70%,transparent)">Contact</p>
+    <h2 style="margin-top:1rem">Hiring for UX research? I'd like to hear about the problem.</h2>
+    <div class="row">
+      <span class="email" id="email">stellamaoyx.wk@gmail.com</span>
+      <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=OShCOa4AAAAJ&amp;hl" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</section>
+<footer class="foot"><div class="wrap"><span>© 2026 Yaxuan (Stella) Mao</span><span>Participant quotes are anonymized. Some details are simplified for confidentiality.</span></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

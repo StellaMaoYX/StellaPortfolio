@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aura Focus · Stella Mao</title>
+<meta name="description" content="An end-to-end research cycle for an ADHD task manager.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Stella Mao <span>UX Research</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#more" class="hide-s">More</a>
+      <a href="index.html#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener" class="hide-s">LinkedIn ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article data-view="aura-focus">
+  <header class="cs-hero wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="kicker"><span class="tag">End to end</span><span class="label">Case study 04 · Mixed methods</span></div>
+    <h1>Getting started shouldn't be the hardest part</h1>
+    <p class="sub">Aura Focus is a task manager for adults with ADHD. We took it through all five research stages in a five-day research sprint, from a survey to paper-prototype tests.</p>
+    <dl class="meta">
+      <div><dt>My role</dt><dd>UX researcher and product manager, team of 4 with Manasvi Kale, Sara Choi, Kohji Andriani</dd></div>
+      <div><dt>Timeline</dt><dd>Fall 2025 · 5 days of research</dd></div>
+      <div><dt>Methods</dt><dd>Survey, interviews, secondary research, affinity mapping, personas, paper prototyping, utility testing</dd></div>
+      <div><dt>Context</dt><dd>UW HCDE 518, User-Centered Design</dd></div>
+    </dl>
+    <div class="tldr">
+      <div><h3>The problem</h3><p>Most productivity tools assume rigid schedules, steady focus and manual sorting, which are the executive functions people with ADHD find hardest to sustain.</p></div>
+      <div><h3>What we did</h3><p>A survey of 35 adults with ADHD, interviews, and secondary research, synthesized in an affinity map and three personas, then paper-prototype and utility tests.</p></div>
+      <div><h3>What changed</h3><p>Six design changes, each traced to a participant. The biggest: suggestions people can override, with the reason shown.</p></div>
+    </div>
+  </header>
+
+  <div class="wrap cs-body">
+    <nav class="toc" aria-label="Sections">
+      <a href="#aura-plan">1 · Planning</a><a href="#aura-research">2 · Research</a><a href="#aura-synth">3 · Synthesis</a><a href="#aura-model">4 · Modeling</a><a href="#aura-eval">5 · Evaluation</a><a href="#aura-reflect">Reflection</a>
+    </nav>
+    <div class="cs-main">
+      <section class="block" id="aura-plan">
+        <p class="label">Stage 1 · Planning</p>
+        <h2>How might we help adults with ADHD manage daily tasks and feel more capable and connected?</h2>
+        <div class="rqs">
+          <div class="rq"><b>Challenges</b>What task-management problems do adults with ADHD face every day?</div>
+          <div class="rq"><b>Current behavior</b>How do they organize, prioritize and finish tasks, and what motivates or discourages them?</div>
+          <div class="rq"><b>Adaptive design</b>How can a tool personalize support without adding cognitive load or taking away control?</div>
+        </div>
+        <div class="prose"><p>With five days for research, I planned each method to answer a different kind of question: the survey for patterns, interviews for motivations, secondary research to frame the problem.</p></div>
+      </section>
+
+      <section class="block" id="aura-research">
+        <p class="label">Stage 2 · User research</p>
+        <h2>Existing tools didn't fit how people with ADHD work</h2>
+        <div class="spec">
+          <div><dt>Survey</dt><dd>35 adults with ADHD: organization strategies, emotional responses, tool use</dd></div>
+          <div><dt>Interviews</dt><dd>Semi-structured, on motivation, task initiation and coping</dd></div>
+          <div><dt>Prioritizing</dt><dd><span class="mono tab">53%</span> said it is the hardest part of organizing their day</dd></div>
+          <div><dt>Current tools</dt><dd>Over <span class="mono tab">55%</span> found them unhelpful</dd></div>
+        </div>
+        <figure class="photo"><img src="images/aura_insights.jpg" alt="Research summary panels for the online survey, user interviews and secondary research"><figcaption>The team's research summary. Interviews showed autonomy is critical for starting tasks: rigid systems caused emotional fatigue.</figcaption></figure>
+        <blockquote>One participant wished the tool could tell them in advance how long each task takes, because time blindness makes them underestimate everything.<cite>P2, paraphrased</cite></blockquote>
+      </section>
+
+      <section class="block" id="aura-synth">
+        <p class="label">Stage 3 · Synthesis</p>
+        <h2>An affinity map, down to four insights</h2>
+        <figure class="photo"><img src="images/aura_affinity.jpg" alt="Affinity map of color-coded sticky notes clustered into themes such as motivation, energy and fatigue, time management, ownership and agency"><figcaption>Every survey and interview note, clustered into themes such as motivation, energy and fatigue, ownership and agency, and time management.</figcaption></figure>
+        <div class="impl">
+          <div><h3>Autonomy starts tasks</h3><p>People wanted to decide in the moment. "I'd rather... decide in the moment."</p></div>
+          <div><h3>Rigidity drains</h3><p>Strict structure created emotional fatigue and stalled follow-through.</p></div>
+          <div><h3>Time is invisible</h3><p>Time blindness made people underestimate every task.</p></div>
+          <div><h3>Tools miss specific needs</h3><p>Over half found current tools unhelpful because they assume one way of working.</p></div>
+        </div>
+      </section>
+
+      <section class="block" id="aura-model">
+        <p class="label">Stage 4 · UX modeling</p>
+        <h2>Three kinds of task managers</h2>
+        <figure class="photo"><img src="images/aura_personas.jpg" alt="Three personas: Ryan the Earnest Initiator, Tina the Life Hacker, Ali the Minimal Engager, each with core needs"><figcaption>Ryan is motivated but lost in an unstructured day. Tina is creative but drained by time management. Ali looks organized but hides it, and avoids labels.</figcaption></figure>
+        <div class="prose"><p>We used the personas to align the team on who we were designing for. They were not treated as validation: design decisions still came from what participants said in testing.</p></div>
+      </section>
+
+      <section class="block" id="aura-eval">
+        <p class="label">Stage 5 · Evaluation</p>
+        <h2>Paper prototypes first, then a utility test</h2>
+        <figure class="photo"><img src="images/aura_proto.jpg" alt="Paper prototype flow made of sticky notes: task input, prioritization, expandable badges, notifications and a puzzle reward"><figcaption>The paper prototype: task input, prioritization, expandable badges, notifications and a puzzle reward.</figcaption></figure>
+        <div class="prose"><p>The utility test covered five questions: gamification and social motivation, energy and cognitive load, autonomy and manual control, positive feedback loops, and how much guidance to give.</p></div>
+        <div class="table-scroll">
+          <table class="recs">
+            <thead><tr><th>What we heard (paraphrased)</th><th>What we changed</th><th>Who</th></tr></thead>
+            <tbody>
+              <tr><td>Wants to know how long tasks take</td><td>Estimate duration and energy level from past tasks</td><td class="mono">P2</td></tr>
+              <tr><td>Gets sidetracked by tasks in other rooms</td><td>Spatial anchors show only the current room's tasks</td><td class="mono">P5</td></tr>
+              <tr><td>Wants to see the logic and adjust it</td><td>Manual override slot, with the reason for each suggestion</td><td class="mono">P4</td></tr>
+              <tr><td>Likes categories already set up</td><td>Voice input that auto-tags time, place and energy</td><td class="mono">P2</td></tr>
+              <tr><td>Don't highlight failure at day's end</td><td>Unfinished tasks roll over neutrally as "pending"</td><td class="mono">UT</td></tr>
+              <tr><td>Prefers social rewards to the puzzle</td><td>Small, opt-in friends leaderboard</td><td class="mono">UT</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="aura-reflect">
+        <p class="label">Reflection</p>
+        <h2>A full cycle on a tight clock</h2>
+        <div class="reflect">
+          <div><h3>Worked</h3><ul><li>Mixed methods gave breadth and depth in five days.</li><li>The iteration table kept design honest to evidence.</li><li>Override control came straight from participants.</li></ul></div>
+          <div><h3>Limits</h3><ul><li>A short sprint and a small interview sample.</li><li>Personas are synthesized, not validated.</li><li>Paper prototypes can't test the AR experience itself.</li></ul></div>
+          <div><h3>Next time</h3><ul><li>Diary study to see real task-starting moments.</li><li>Test an interactive prototype over several days.</li><li>Measure task initiation, not just preference.</li></ul></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="next wrap"><a href="sage.html"><div><p class="label">Back to the first case study</p><h3>100% task success, and still a shadow system in Excel</h3></div><span class="arrow">→</span></a></div>
+</article>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="label" style="color:color-mix(in srgb,var(--paper) 70%,transparent)">Contact</p>
+    <h2 style="margin-top:1rem">Hiring for UX research? I'd like to hear about the problem.</h2>
+    <div class="row">
+      <span class="email" id="email">stellamaoyx.wk@gmail.com</span>
+      <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=OShCOa4AAAAJ&amp;hl" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</section>
+<footer class="foot"><div class="wrap"><span>© 2026 Yaxuan (Stella) Mao</span><span>Participant quotes are anonymized. Some details are simplified for confidentiality.</span></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

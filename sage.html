@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAGE Usability Study · Stella Mao</title>
+<meta name="description" content="Usability study of UW’s SAGE grant system: 100% task success, and still a shadow system in Excel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">Stella Mao <span>UX Research</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#work">Work</a>
+      <a href="index.html#more" class="hide-s">More</a>
+      <a href="index.html#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener" class="hide-s">LinkedIn ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<article data-view="sage">
+  <header class="cs-hero wrap">
+    <a class="back" href="index.html#work">← All work</a>
+    <div class="kicker"><span class="tag">Evaluative</span><span class="label">Case study 01 · Usability testing</span></div>
+    <h1>100% task success, and still a shadow system in Excel</h1>
+    <p class="sub">A usability study of the Award Request List in SAGE, the University of Washington's grant-management system, done with the SAGE product team in UW's Office of Research.</p>
+    <dl class="meta">
+      <div><dt>My role</dt><dd>UX researcher on a team of 4: study design, moderation, analysis, readout</dd></div>
+      <div><dt>Timeline</dt><dd>Jan to Feb 2026</dd></div>
+      <div><dt>Methods</dt><dd>Heuristic evaluation, moderated usability testing, think-aloud, SUS</dd></div>
+      <div><dt>Stakeholder</dt><dd>SAGE product and engineering team, UW Office of Research</dd></div>
+    </dl>
+    <div class="tldr">
+      <div><h3>The problem</h3><p>Experienced grant managers kept their own spreadsheets to track requests SAGE was built to track. The team had complaints but no evidence of which problems cost the most.</p></div>
+      <div><h3>What we did</h3><p>A heuristic evaluation to find likely issues cheaply, then 5 moderated sessions with expert users across four schools, scored by a four-factor severity rubric.</p></div>
+      <div><h3>What changed</h3><p>The product team triaged our recommendations into its backlog with tickets and priorities, and later reached the same root diagnosis in its own independent analysis.</p></div>
+    </div>
+  </header>
+
+  <div class="wrap cs-body">
+    <nav class="toc" aria-label="Sections">
+      <a href="#sage-context">Context</a><a href="#sage-rq">Questions</a><a href="#sage-approach">Approach</a><a href="#sage-findings">Findings</a><a href="#sage-recs">Recommendations</a><a href="#sage-impact">Impact</a><a href="#sage-reflect">Reflection</a>
+    </nav>
+    <div class="cs-main">
+      <section class="block" id="sage-context">
+        <p class="label">Stage 1 · Planning · Context</p>
+        <h2>The list grant managers use to run their day</h2>
+        <div class="prose">
+          <p>Campus grant administrators use SAGE's Award Request List to track Award Setup Requests and Modification Requests, the two workflows that move every research award through review. Earlier feedback had flagged search, status tracking and visibility, but feedback alone couldn't tell the team <em>which</em> problems mattered most, or why experienced people were still building workarounds.</p>
+          <p>The surprising part came early. <mark class="hl">All 5 participants completed every task, and 4 of 5 made critical errors along the way.</mark> Task success was measuring how good experts had become at routing around the system. That gap became the core argument of the study.</p>
+        </div>
+      </section>
+
+      <section class="block" id="sage-rq">
+        <p class="label">Stage 1 · Planning · Research questions</p>
+        <h2>Breaking "is it usable?" into five testable questions</h2>
+        <div class="rqs">
+          <div class="rq"><b>RQ1 · Search &amp; filter</b>How well can users find a specific request with the current search and filters?</div>
+          <div class="rq"><b>RQ2 · Status</b>How clearly does the system communicate status and the next required action?</div>
+          <div class="rq"><b>RQ3 · Prioritization</b>How do users plan their daily workload from the list?</div>
+          <div class="rq"><b>RQ4 · Workarounds</b>What do users do outside SAGE to compensate for its limits?</div>
+          <div class="rq"><b>RQ5 · Ownership</b>How do users tell their own action items from items waiting on someone else?</div>
+        </div>
+      </section>
+
+      <section class="block" id="sage-approach">
+        <p class="label">Stages 1–2 · Planning and research · Approach</p>
+        <h2>Spend expert hours only on what needs real users</h2>
+        <div class="prose"><p>Participants were scarce: a small, credentialed user base with full calendars. So we used a cheap method first to decide what the expensive method should test.</p></div>
+        <ol class="flow">
+          <li><b>Heuristic evaluation</b>Scored the interface against Nielsen's 10 heuristics with severity ratings.</li>
+          <li><b>Test plan</b>Turned the top issues into 3 realistic task scenarios.</li>
+          <li><b>Recruit</b>Targeted outreach across four schools; weekly users with 3+ months on SAGE.</li>
+          <li><b>5 sessions</b>Remote, moderated, ~55 min each, think-aloud plus SUS.</li>
+          <li><b>Severity scoring</b>Frequency, impact, persistence and frustration for each issue.</li>
+          <li><b>Readout</b>Recommendations mapped to the team that owns each fix.</li>
+        </ol>
+        <dl class="spec">
+          <div><dt>Participants</dt><dd>N = 5 expert users, 1 to 20+ years on the job: Medicine, Computer Science, Education, Engineering</dd></div>
+          <div><dt>Session</dt><dd>5 min context interview, 30 to 40 min tasks, 10 min post-study questionnaire</dd></div>
+          <div><dt>Measures</dt><dd>Task completion, error counts (search, navigation, selection), post-task 1 to 5 ratings, SUS</dd></div>
+          <div><dt>SUS result</dt><dd><mark class="todo">add mean SUS score</mark></dd></div>
+        </dl>
+      </section>
+
+      <section class="block" id="sage-findings">
+        <p class="label">Stage 3 · Synthesis · Findings</p>
+        <h2>Three high-severity issues pushed people out of the system</h2>
+        <div class="prose"><p>Before the problems: status labels were rated clear (4 of 5 gave 4 or 5 out of 5), and all 5 went straight to Comments &amp; History for context. We weren't asking the team to rebuild SAGE, only to close specific gaps.</p></div>
+        <div>
+          <div class="finding">
+            <div>
+              <p class="sev high"><i></i>High severity</p>
+              <h3>Filters disappear after every click into a record</h3>
+              <p>Opening a request and coming back wiped every applied filter, so each look at a detail meant rebuilding the list. This happens dozens of times a day.</p>
+              <p class="rec"><b>Recommendation</b>Keep filter state on back navigation and support opening records in a new tab.</p>
+            </div>
+            <div>
+              <div class="tally" aria-label="4 of 5 participants"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><span>4/5 affected</span></div>
+              <blockquote>"That happens all the time... if I hit the back button, I don't have my list anymore. I have to search it again."<cite>P3 · training grants administrator, 20+ years</cite></blockquote>
+            </div>
+          </div>
+          <div class="finding">
+            <div>
+              <p class="sev high"><i></i>High severity</p>
+              <h3>Search can't find awards the way people ask about them</h3>
+              <p>PI name search didn't exist in the Awards tab. The PI filter required an exact "Last, First" format with no hint, and slow results had no loading state.</p>
+              <p class="rec"><b>Recommendation</b>Add PI name search with flexible formats and a visible loading state.</p>
+            </div>
+            <div>
+              <div class="tally" aria-label="5 of 5 participants"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><span>5/5 affected</span></div>
+              <blockquote>"The first time it did not give me anything, but then it finally did."<cite>P5 · School of Engineering</cite></blockquote>
+            </div>
+          </div>
+          <div class="finding">
+            <div>
+              <p class="sev high"><i></i>High severity</p>
+              <h3>Finding one request means visiting a second system</h3>
+              <p>Search accepted only internal application or request IDs, which grant managers rarely have when a PI calls. They looked the ID up in another portal, then came back to search again.</p>
+              <p class="rec"><b>Recommendation</b>Accept PI name and Award ID directly in SAGE search.</p>
+            </div>
+            <div>
+              <div class="tally" aria-label="4 of 5 participants"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><span>4/5 affected</span></div>
+              <blockquote>"It's kind of time consuming to have to go back and forth between two different tabs."<cite>P2 · grants manager, Computer Science</cite></blockquote>
+            </div>
+          </div>
+          <div class="finding">
+            <div>
+              <p class="sev mid"><i></i>Moderate severity</p>
+              <h3>No export, so people copy data into spreadsheets by hand</h3>
+              <p>This was the direct mechanism behind the shadow Excel system we set out to explain.</p>
+              <p class="rec"><b>Recommendation</b>CSV or Excel export that respects the current filters.</p>
+            </div>
+            <div>
+              <div class="tally" aria-label="3 of 5 participants"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><span>3/5 keep external sheets</span></div>
+              <blockquote>"It would be great if I could download reports... without having to hunt it down and put it in a separate spreadsheet."<cite>P3</cite></blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="sage-recs">
+        <p class="label">Stage 5 · Evaluation · Recommendations</p>
+        <h2>Every fix assigned to the team that would build it</h2>
+        <div class="prose"><p>A list of problems handed to "the product team" tends to stall. We mapped each recommendation to an owning function so it could become a ticket the same week.</p></div>
+        <div class="table-scroll">
+          <table class="recs">
+            <thead><tr><th>Severity</th><th>Issue</th><th>Recommendation</th><th>Owner</th></tr></thead>
+            <tbody>
+              <tr><td><span class="sev high"><i></i>High</span></td><td>Filters lost on navigation</td><td>Persist filter state; open in new tab</td><td>Engineering, UX</td></tr>
+              <tr><td><span class="sev high"><i></i>High</span></td><td>Limited, inconsistent search</td><td>PI name search, flexible formats, loading states</td><td>Product, Engineering</td></tr>
+              <tr><td><span class="sev high"><i></i>High</span></td><td>Search needs an outside lookup</td><td>Accept PI name and Award ID</td><td>Product, Engineering</td></tr>
+              <tr><td><span class="sev mid"><i></i>Moderate</span></td><td>No data export</td><td>Filter-aware CSV / Excel export</td><td>Engineering, Product</td></tr>
+              <tr><td><span class="sev mid"><i></i>Moderate</span></td><td>List view lacks context</td><td>Customizable columns: type, summary, next owner</td><td>Design, Product</td></tr>
+              <tr><td><span class="sev low"><i></i>Irritant</span></td><td>Unclear ownership</td><td>"My requests" filter and ownership markers</td><td>Design, Engineering</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="block" id="sage-impact">
+        <p class="label">Impact</p>
+        <div class="callout">
+          <p class="big">"Excel is the real tool... BI Portal is an intermediate step."</p>
+          <div style="display:flex;flex-direction:column;gap:.8rem">
+            <p class="label">From the product team's own synthesis, months later</p>
+            <p>The SAGE product team turned our recommendations into backlog tickets with priority levels. They accepted some, pushed back on others where business constraints differed from our priority calls, and flagged a few for more discovery.</p>
+            <p>Months later, while planning a larger migration, the team cross-analyzed three independent evaluations, including ours, and reached the same root diagnosis from their own data.</p>
+          </div>
+        </div>
+        <div class="prose"><p>The pushback is part of the result. Research is an input to a decision, and watching a team weigh, accept and contest our findings showed me the study was taken seriously.</p></div>
+      </section>
+
+      <section class="block" id="sage-reflect">
+        <p class="label">Reflection</p>
+        <h2>What I'd keep, and what I'd change</h2>
+        <div class="reflect">
+          <div><h3>Worked</h3><ul><li>Heuristic evaluation first kept scarce participant time focused.</li><li>Consistent error patterns across 4 of 5 people made the case hard to dismiss.</li><li>Owner-mapped recommendations moved straight into a backlog.</li></ul></div>
+          <div><h3>Limits</h3><ul><li>Only experienced users; novices haven't built workarounds yet.</li><li>N = 5 supports finding issues, not estimating how often they occur.</li><li>We didn't time tasks or log error rates systematically.</li></ul></div>
+          <div><h3>Next time</h3><ul><li>Add novice users as a comparison group.</li><li>Grow to 8 to 10 sessions and add time on task.</li><li>Include edge-case tasks where the system is most likely to break.</li></ul></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="next wrap"><a href="automation-bias.html"><div><p class="label">Next case study</p><h3>Should an AI show its answer before or after you decide?</h3></div><span class="arrow">→</span></a></div>
+</article>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="label" style="color:color-mix(in srgb,var(--paper) 70%,transparent)">Contact</p>
+    <h2 style="margin-top:1rem">Hiring for UX research? I'd like to hear about the problem.</h2>
+    <div class="row">
+      <span class="email" id="email">stellamaoyx.wk@gmail.com</span>
+      <button class="btn" id="copy" type="button">Copy email</button>
+    </div>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=OShCOa4AAAAJ&amp;hl" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</section>
+<footer class="foot"><div class="wrap"><span>© 2026 Yaxuan (Stella) Mao</span><span>Participant quotes are anonymized. Some details are simplified for confidentiality.</span></div></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
