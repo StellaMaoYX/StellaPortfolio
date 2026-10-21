@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VR for Dental Anxiety · Stella Mao</title>
 <meta name="description" content="Co-designing VR with anxious children, their parents and dentists.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VR for Dental Anxiety · Stella Mao">
+<meta property="og:description" content="Co-designing VR with anxious children, their parents and dentists.">
+<meta property="og:url" content="https://stellamaoyx.github.io/StellaPortfolio/vr-dental.html">
+<meta property="og:image" content="https://stellamaoyx.github.io/StellaPortfolio/images/og-thumbnail.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://stellamaoyx.github.io/StellaPortfolio/images/og-thumbnail.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -18,6 +27,7 @@
       <a href="index.html#work">Work</a>
       <a href="index.html#more" class="hide-s">More</a>
       <a href="index.html#about">About</a>
+      <a href="StellaMao_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a href="#contact">Contact</a>
       <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener" class="hide-s">LinkedIn ↗</a>
     </nav>
@@ -35,12 +45,12 @@
       <div><dt>My role</dt><dd>Lead researcher and first author: protocol, recruiting, facilitation, analysis</dd></div>
       <div><dt>Timeline</dt><dd>Sep 2023 to Mar 2025</dd></div>
       <div><dt>Methods</dt><dd>Co-design workshops, bodystorming, parent and dentist interviews, thematic analysis</dd></div>
-      <div><dt>Output</dt><dd>Published at ACM CSCW 2025 · BiWell Lab, CityU Hong Kong</dd></div>
+      <div><dt>Output</dt><dd>Product requirements and an Unreal Engine prototype · Published at ACM CSCW 2025</dd></div>
     </dl>
     <div class="tldr">
       <div><h3>The problem</h3><p>Dental anxiety leads children to delay care. Sedation worries parents and therapy takes time. Existing VR tools mostly distract, and they're designed without the adults who decide whether a child uses them.</p></div>
       <div><h3>What I did</h3><p>5 co-design workshops with 13 anxious children aged 10 to 12, parallel interviews with their 13 parents, and design reviews with 2 dentists.</p></div>
-      <div><h3>What I found</h3><p>Each group defined success differently. I turned the conflicts into six product requirements, including using different VR modes before and during treatment.</p></div>
+      <div><h3>What I found</h3><p>Each group defined success differently. I turned the conflicts into six product requirements, then built and validated an immersive prototype in Unreal Engine that improved children's comfort and engagement.</p></div>
     </div>
   </header>
 
@@ -64,6 +74,7 @@
       <section class="block" id="vr-method">
         <p class="label">Stage 2 · User research · Method</p>
         <h2>Letting 10-year-olds design, without the adults steering</h2>
+        <div class="why"><b>Why co-design, not interviews alone</b>Ten-year-olds find it hard to describe abstract needs, but they can build them. Making and acting out designs surfaced needs like control and company that a question-and-answer interview would likely miss. Parents and dentists then reacted to concrete designs instead of hypotheticals.</div>
         <div class="prose"><p>Recruiting was the first hard problem. We screened 44 children with a standardized dental-fear scale (CFSS-DS) and kept 13 with moderate to severe anxiety. Strict criteria made online recruiting slow, so I printed posters and took them to elementary schools.</p></div>
         <ol class="flow">
           <li><b>Journey map</b>Children mapped their last dental visit with comics: triggers, coping, what helped.</li>
@@ -135,6 +146,11 @@
       <section class="block" id="vr-impl">
         <p class="label">Outcome · Product requirements</p>
         <h2>From conflicting needs to product requirements</h2>
+        <div class="chain">
+          <div><b>We know</b><p>The playful designs children want most are the ones dentists say are unsafe in the chair.</p></div>
+          <div><b>So change</b><p>Split the product by stage: active VR at home or in the waiting room, calm VR during treatment.</p></div>
+          <div><b>So expect</b><p>A product parents will approve and clinics can actually use, instead of one that excites kids and gets rejected by the adults who decide.</p></div>
+        </div>
         <div class="impl">
           <div><h3>Stage-based modes</h3><p>Interactive before treatment, passive during. Resolves child excitement vs. dentist safety.</p></div>
           <div><h3>Adaptive exposure</h3><p>Start cartoon-like, move toward realism as anxiety drops, and blur specific stressors. Resolves comfort vs. accurate expectations.</p></div>
@@ -150,8 +166,8 @@
         <h2>What researching with children taught me</h2>
         <div class="reflect">
           <div><h3>Worked</h3><ul><li>Hands-on materials and bodystorming got 10-year-olds past "make it fun".</li><li>Keeping parents in a separate room protected the children's ideas.</li><li>Dentist reviews grounded ideas in clinical reality early.</li></ul></div>
-          <div><h3>Limits</h3><ul><li>All participants in a Chinese context; 2 dentists only.</li><li>Concepts, not a working system, so no effectiveness data.</li><li>Families interested in technology were likelier to sign up.</li></ul></div>
-          <div><h3>Next time</h3><ul><li>Prototype the stage-based modes and test them in a clinic.</li><li>Recruit more dentists and dental nurses.</li><li>Follow families over multiple visits.</li></ul></div>
+          <div><h3>Limits</h3><ul><li>All participants in a Chinese context; 2 dentists only.</li><li>Families interested in technology were likelier to sign up.</li></ul></div>
+          <div><h3>Next time</h3><ul><li>Test the stage-based modes in a real clinic.</li><li>Recruit more dentists and dental nurses.</li><li>Follow families over multiple visits.</li></ul></div>
         </div>
       </section>
     </div>
@@ -167,6 +183,7 @@
     <div class="row">
       <span class="email" id="email">stellamaoyx.wk@gmail.com</span>
       <button class="btn" id="copy" type="button">Copy email</button>
+      <a class="btn ghost" href="StellaMao_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
     </div>
     <div class="links">
       <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener">LinkedIn</a>

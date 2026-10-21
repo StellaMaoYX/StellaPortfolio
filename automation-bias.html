@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AI-first vs. Human-first · Stella Mao</title>
 <meta name="description" content="A 100-person experiment on how AI workflow order changes the errors people make.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI-first vs. Human-first · Stella Mao">
+<meta property="og:description" content="A 100-person experiment on how AI workflow order changes the errors people make.">
+<meta property="og:url" content="https://stellamaoyx.github.io/StellaPortfolio/automation-bias.html">
+<meta property="og:image" content="https://stellamaoyx.github.io/StellaPortfolio/images/og-thumbnail.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://stellamaoyx.github.io/StellaPortfolio/images/og-thumbnail.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -18,6 +27,7 @@
       <a href="index.html#work">Work</a>
       <a href="index.html#more" class="hide-s">More</a>
       <a href="index.html#about">About</a>
+      <a href="StellaMao_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a href="#contact">Contact</a>
       <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener" class="hide-s">LinkedIn ↗</a>
     </nav>
@@ -71,6 +81,7 @@
         <p class="label">Stages 1–2 · Planning and research · Study design</p>
         <h2>Same images, same AI, only the order changes</h2>
         <div class="prose"><p>I chose X-ray baggage screening because it is a standard paradigm in automation-bias research where right and wrong are unambiguous. That made it possible to plant exactly as many chances for each error type as I needed.</p></div>
+        <div class="why"><b>Why an online experiment, not a field study</b>The question was causal: does order alone change behavior? A field study can't control when the AI is wrong. A controlled experiment with 100 people let me plant AI errors and compare the two workflows directly. The trade-off is realism, which I name in the limits below.</div>
         <dl class="spec">
           <div><dt>Design</dt><dd>2 workflow (between) × 2 AI correctness × 2 difficulty (within)</dd></div>
           <div><dt>Participants</dt><dd>N = 100 on Prolific, randomized 50 / 50, desktop only, IRB approved</dd></div>
@@ -92,10 +103,10 @@
           <table class="recs">
             <thead><tr><th>#</th><th>Hypothesis</th><th>Result</th><th>What the data showed</th></tr></thead>
             <tbody>
-              <tr><td class="mono">H1a</td><td>AI-first causes more commission and omission errors</td><td><span class="sev mid"><i></i>Partly</span></td><td>Commission only</td></tr>
-              <tr><td class="mono">H1b</td><td>Human-first gives higher accuracy</td><td><span class="sev high"><i></i>Not supported</span></td><td>Equal overall, with a crossover by AI correctness</td></tr>
-              <tr><td class="mono">H2</td><td>Human-first users verify more</td><td><span class="sev high"><i></i>Not supported</span></td><td>The opposite: AI-first verified more</td></tr>
-              <tr><td class="mono">H3</td><td>Calibration changes the workflow effect</td><td><span class="sev high"><i></i>Not supported</span></td><td>Better calibration helped in both workflows</td></tr>
+              <tr><td class="mono">1</td><td>Showing AI first causes more of both error types</td><td><span class="sev mid"><i></i>Partly</span></td><td>Commission only</td></tr>
+              <tr><td class="mono">2</td><td>Deciding first gives higher accuracy</td><td><span class="sev high"><i></i>Not supported</span></td><td>Equal overall, with a crossover by AI correctness</td></tr>
+              <tr><td class="mono">3</td><td>People who decide first check their work more</td><td><span class="sev high"><i></i>Not supported</span></td><td>The opposite: AI-first verified more</td></tr>
+              <tr><td class="mono">4</td><td>Self-awareness changes which workflow is better</td><td><span class="sev high"><i></i>Not supported</span></td><td>Better calibration helped in both workflows</td></tr>
             </tbody>
           </table>
         </div>
@@ -125,7 +136,7 @@
               <text x="468" y="165" class="svg-text-ink">64%</text>
               <text x="468" y="193" class="svg-text-ink" style="fill:var(--accent)">56%</text>
             </svg>
-            <figcaption>Final decision accuracy by condition. Workflow × AI correctness interaction OR = 4.04, p &lt; .001 (mixed-effects logistic regression). Overall accuracy: 17.9 vs. 18.1 of 24, p = .77.</figcaption>
+            <figcaption>Final decision accuracy by condition. Overall accuracy was the same (17.9 vs. 18.1 of 24). The crossover is statistically significant.</figcaption>
           </figure>
 
           <figure class="chart" style="margin:0">
@@ -180,7 +191,7 @@
           <div class="finding">
             <div>
               <h3>4. Calibrated people resisted bias in both workflows</h3>
-              <p>People whose confidence tracked their accuracy made fewer automation-bias errors under either design, with no evidence that calibration changed the workflow effect (interaction OR = 1.05, 95% CI 0.48 to 2.29). Calibration support is a lever that works alongside workflow choice.</p>
+              <p>People whose confidence tracked their accuracy made fewer automation-bias errors under either design, and this held equally for both workflows. Calibration support is a lever that works alongside workflow choice.</p>
             </div>
             <div><blockquote>"I felt uncertain when the AI's suggestion differed from my initial decision, which prompted me to re-examine the image."<cite>Human-first participant</cite></blockquote></div>
           </div>
@@ -190,6 +201,11 @@
       <section class="block" id="ab-recs">
         <p class="label">Outcome · Design guidance</p>
         <h2>What I'd tell a team shipping an AI-assisted review tool</h2>
+        <div class="chain">
+          <div><b>We know</b><p>Showing AI first makes people follow wrong AI flags 67% more often, while looking more diligent.</p></div>
+          <div><b>So change</b><p>Ask for a quick first call, or reveal AI detail in stages, and add friction before switching to the AI's answer.</p></div>
+          <div><b>So expect</b><p>Fewer reviewers acting on false alarms, which means fewer wrongful flags, escalations or takedowns. This is a hypothesis to A/B test in a real tool.</p></div>
+        </div>
         <div class="impl">
           <div><h3>Choose the order by the cost of each error</h3><p>If false alarms are expensive to act on, delay the AI. If the model is highly reliable and misses are the bigger risk, showing it first can help. Track commission and omission separately.</p></div>
           <div><h3>Use staged disclosure</h3><p>Ask for a quick initial call, or reveal AI detail progressively, so people form a view before the recommendation frames what they look at.</p></div>
@@ -220,6 +236,7 @@
     <div class="row">
       <span class="email" id="email">stellamaoyx.wk@gmail.com</span>
       <button class="btn" id="copy" type="button">Copy email</button>
+      <a class="btn ghost" href="StellaMao_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
     </div>
     <div class="links">
       <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener">LinkedIn</a>

@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SAGE Usability Study · Stella Mao</title>
 <meta name="description" content="Usability study of UW’s SAGE grant system: 100% task success, and still a shadow system in Excel.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SAGE Usability Study · Stella Mao">
+<meta property="og:description" content="Usability study of UW’s SAGE grant system: 100% task success, and still a shadow system in Excel.">
+<meta property="og:url" content="https://stellamaoyx.github.io/StellaPortfolio/sage.html">
+<meta property="og:image" content="https://stellamaoyx.github.io/StellaPortfolio/images/og-thumbnail.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://stellamaoyx.github.io/StellaPortfolio/images/og-thumbnail.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -18,6 +27,7 @@
       <a href="index.html#work">Work</a>
       <a href="index.html#more" class="hide-s">More</a>
       <a href="index.html#about">About</a>
+      <a href="StellaMao_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a href="#contact">Contact</a>
       <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener" class="hide-s">LinkedIn ↗</a>
     </nav>
@@ -39,7 +49,7 @@
     </dl>
     <div class="tldr">
       <div><h3>The problem</h3><p>Experienced grant managers kept their own spreadsheets to track requests SAGE was built to track. The team had complaints but no evidence of which problems cost the most.</p></div>
-      <div><h3>What we did</h3><p>A heuristic evaluation to find likely issues cheaply, then 5 moderated sessions with expert users across four schools, scored by a four-factor severity rubric.</p></div>
+      <div><h3>What we did</h3><p>A heuristic evaluation to find likely issues cheaply, then 5 moderated sessions with expert users across four schools. 100% task success, but a SUS score of 52.</p></div>
       <div><h3>What changed</h3><p>The product team triaged our recommendations into its backlog with tickets and priorities, and later reached the same root diagnosis in its own independent analysis.</p></div>
     </div>
   </header>
@@ -54,7 +64,7 @@
         <h2>The list grant managers use to run their day</h2>
         <div class="prose">
           <p>Campus grant administrators use SAGE's Award Request List to track Award Setup Requests and Modification Requests, the two workflows that move every research award through review. Earlier feedback had flagged search, status tracking and visibility, but feedback alone couldn't tell the team <em>which</em> problems mattered most, or why experienced people were still building workarounds.</p>
-          <p>The surprising part came early. <mark class="hl">All 5 participants completed every task, and 4 of 5 made critical errors along the way.</mark> Task success was measuring how good experts had become at routing around the system. That gap became the core argument of the study.</p>
+          <p>The surprising part came early. <mark class="hl">All 5 participants completed every task, and 4 of 5 made critical errors along the way.</mark> Their mean SUS score was 52, well below the usual benchmark of 68. Task success was measuring how good experts had become at routing around the system. That gap became the core argument of the study.</p>
         </div>
       </section>
 
@@ -74,6 +84,7 @@
         <p class="label">Stages 1–2 · Planning and research · Approach</p>
         <h2>Spend expert hours only on what needs real users</h2>
         <div class="prose"><p>Participants were scarce: a small, credentialed user base with full calendars. So we used a cheap method first to decide what the expensive method should test.</p></div>
+        <div class="why"><b>Why this method, not another</b>A survey would have told us people were unhappy, which the team already knew. Analytics couldn't show the workarounds that happen outside SAGE. Watching experts do real tasks while thinking aloud was the only way to see where they left the system and why.</div>
         <ol class="flow">
           <li><b>Heuristic evaluation</b>Scored the interface against Nielsen's 10 heuristics with severity ratings.</li>
           <li><b>Test plan</b>Turned the top issues into 3 realistic task scenarios.</li>
@@ -86,7 +97,7 @@
           <div><dt>Participants</dt><dd>N = 5 expert users, 1 to 20+ years on the job: Medicine, Computer Science, Education, Engineering</dd></div>
           <div><dt>Session</dt><dd>5 min context interview, 30 to 40 min tasks, 10 min post-study questionnaire</dd></div>
           <div><dt>Measures</dt><dd>Task completion, error counts (search, navigation, selection), post-task 1 to 5 ratings, SUS</dd></div>
-          <div><dt>SUS result</dt><dd><mark class="todo">add mean SUS score</mark></dd></div>
+          <div><dt>SUS result</dt><dd><span class="mono tab">52</span> / 100 mean, well below the commonly used benchmark of 68</dd></div>
         </dl>
       </section>
 
@@ -182,7 +193,7 @@
         <p class="label">Reflection</p>
         <h2>What I'd keep, and what I'd change</h2>
         <div class="reflect">
-          <div><h3>Worked</h3><ul><li>Heuristic evaluation first kept scarce participant time focused.</li><li>Consistent error patterns across 4 of 5 people made the case hard to dismiss.</li><li>Owner-mapped recommendations moved straight into a backlog.</li></ul></div>
+          <div><h3>Worked</h3><ul><li>Heuristic evaluation first kept scarce participant time focused.</li><li>Pairing 100% task success with a SUS of 52 made the gap hard to dismiss.</li><li>Owner-mapped recommendations moved straight into a backlog.</li></ul></div>
           <div><h3>Limits</h3><ul><li>Only experienced users; novices haven't built workarounds yet.</li><li>N = 5 supports finding issues, not estimating how often they occur.</li><li>We didn't time tasks or log error rates systematically.</li></ul></div>
           <div><h3>Next time</h3><ul><li>Add novice users as a comparison group.</li><li>Grow to 8 to 10 sessions and add time on task.</li><li>Include edge-case tasks where the system is most likely to break.</li></ul></div>
         </div>
@@ -200,6 +211,7 @@
     <div class="row">
       <span class="email" id="email">stellamaoyx.wk@gmail.com</span>
       <button class="btn" id="copy" type="button">Copy email</button>
+      <a class="btn ghost" href="StellaMao_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
     </div>
     <div class="links">
       <a href="https://www.linkedin.com/in/yaxuan-stella-mao/" target="_blank" rel="noopener">LinkedIn</a>
